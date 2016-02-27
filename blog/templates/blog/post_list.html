@@ -3,7 +3,12 @@
     <title>Blog</title>
   </head>
   <body>
-    <p>Şablon</p>
-    <p>Boş içerik</p>
+    {% for post in posts %}
+      <div>
+        <p> yayınlanma: {{post.yayinlama_tarihi}}</p>
+        <h1><a href="">{{ post.title}}</a></h1>
+        <p>{{ post.yazi|linebreaks }}</p>
+      </div>
+    {% endfor %}
   </body>
 </html>
